@@ -1,7 +1,7 @@
 $cyan-dark: hsl(185, 75%, 39%);
 $blue-very-dark: hsl(229, 23%, 23%);
 $blue-grey-dark: hsl(227, 10%, 46%);
-$gray-dark: gray hsl(0, 0%, 59%);
+$gray-dark: hsl(0, 0%, 59%);
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
@@ -16,9 +16,60 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $cyan-dark;
 }
 
 .card {
     width: 353px;
     height: 375px;
+}
+
+.card-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 290px;
+}
+
+.card-bottom {
+    background-color: white;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-main__hr {
+    border: 1px solid $blue-grey-dark;
+}
+
+.card-main__background {
+    width: 100%;
+    z-index: 1; //the images that needs to be below needs a lower z indes
+}
+
+.card-main__headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-main__img {
+    border-radius: 50px;
+    border: 5px solid white;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    top: -50px;
+}
+
+
+@media (max-width: 375px) {
+
+    .card {
+        width: 328px;
+    }
+
 }
